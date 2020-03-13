@@ -1,0 +1,30 @@
+.information-bar{
+    background: rgb(73,73,73);
+    background: linear-gradient(71deg, rgba(73,73,73,1) 24%, rgba(0,0,0,1) 66%, rgba(186,186,186,1) 100%);
+    width:80%;
+    display: inline-block; 
+}
+.information-bar label,h1{
+    text-align: left;
+    margin-left: 20px;
+    position: relative;
+    font-family: "Lucida Console", Monaco, monospace;
+    
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+    color: #DBDBDB;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    
+}
+a{
+    color: #DBDBDB;
+}
+a:hover{
+    color: #FFFFFF;
+    background: #232323;
+    cursor: pointer;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #3248a8, 0 0 30px #3248a8, 0 0 40px #3248a8, 0 0 55px #3248a8, 0 0 75px #3248a8;
+    }

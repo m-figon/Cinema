@@ -1,0 +1,40 @@
+
+.upper-bar{
+    width:80%;
+    height:15%;
+    background: rgb(0,0,0);
+    background: linear-gradient(71deg, rgba(0,0,0,1) 0%, rgba(52,48,48,1) 38%, rgba(88,91,91,1) 100%); 
+    display: inline-block; 
+}
+.App-logo{
+    width:100px;
+    height:100px;
+    float:left;
+}
+.text-bar{
+    margin-right: 40px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.upper-bar h1{
+    margin-left: 20px;
+    display: inline;
+    position: relative;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    word-spacing: 10px;
+    color: #DBDBDB;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+.upper-bar h1:hover{
+color: #FFFFFF;
+background: #232323;
+cursor: pointer;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #3248a8, 0 0 30px #3248a8, 0 0 40px #3248a8, 0 0 55px #3248a8, 0 0 75px #3248a8;
+}
