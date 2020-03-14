@@ -3,7 +3,6 @@ import {Component} from 'react';
 import "./film.style.css";
 import filmData from '../filmsDataBase.json';
 function Film(props){
-
         return(
             <div class="film">
                     <br></br>
@@ -12,7 +11,7 @@ function Film(props){
                     <h1 key={props.id}>{filmData[props.id].type}|</h1>
                     <h1 key={props.id}>Od lat {filmData[props.id].ageRestrictions}|</h1>
                     <h1 key={props.id}>{filmData[props.id].duration}|</h1> 
-                    <iframe width="420" height="315"
+                    <iframe 
                         src={filmData[props.id].trailer}>
                     </iframe>        
               </div>

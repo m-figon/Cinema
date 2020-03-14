@@ -6,3 +6,6 @@
     background-color: white;
     z-index: 1337;
 }
+.loged h1{
+    text-align: right;
+}

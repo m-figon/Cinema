@@ -8,7 +8,8 @@ class UpperBar extends Component{
         super();
         this.state={
             clicked: false,
-            operation: "Zaloguj"
+            operation: "Zaloguj",
+            loginName: ""
         };
         this.login = this.login.bind(this);
     }
@@ -18,7 +19,7 @@ class UpperBar extends Component{
                 clicked: true
             });
         }
-        else{
+        if(this.state.clicked===true){
             this.setState({
                 clicked: false
             });
@@ -28,13 +29,13 @@ class UpperBar extends Component{
     render(){
             return(
                 <div class="upper-bar">
-                    <Popup name={this.state.operation} id={this.state.clicked}/>
+                    <Popup name={this.state.loginName} id={this.state.clicked}/>
                     <img src={logo} className="App-logo" alt="logo" />
                     <div class="text-bar">
                         <h1 onClick={this.props.repertoireHandler}> RCinema</h1>
                         <h1 class="distance" onClick={this.props.repertoireHandler}> Repertuar</h1>
                         <h1 onClick={this.props.informationHandler}> Informacje</h1>
-                        <h1 onClick={this.login}>{this.state.operation}</h1>
+                        <h1 onClick={this.login}>Zaloguj/Wyloguj</h1>
                     </div>
                 </div>
             )
