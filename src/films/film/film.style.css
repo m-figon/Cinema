@@ -1,43 +1,36 @@
 .film{
-    background: rgb(73,73,73);
-    background: linear-gradient(71deg, rgba(73,73,73,1) 24%, rgba(0,0,0,1) 66%, rgba(186,186,186,1) 100%);
+   background: url('https://images5.alphacoders.com/774/thumb-1920-774369.jpg');
     width:80%;
     display: inline-block; 
 }
 .film h2,h1{
     text-align: left;
-    margin-left: 20px;
     position: relative;
-    font-family: "Lucida Console", Monaco, monospace;
-    
-    letter-spacing: 0.8px;
-    word-spacing: 2px;
-    color: #DBDBDB;
+    font-family: "PT Sans";
+    color: #AFAFAF;
     font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
     
 }
 .film h2{
     font-size: 30px;
     text-transform: uppercase;
-    margin-left: 100px ;
+    margin-left: 100px;
 }
 .film h1{
-    font-size: 20px;
-    display:inline-block;
-    margin-bottom: 100px;
+    font-size: 24px;
+    line-height: 50px;
+    margin: 0px;
 }
 .film img{
     width:20%;
     height: 20%;
-    display:inline-block;
-    margin-bottom: -50px;
-    margin-left: 0px;
+    float: left;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 }
-iframe{
+.film iframe{
     width: 600px;
     height:400px;
-    margin-left: 100px;
+    margin-top: -150px;
 }

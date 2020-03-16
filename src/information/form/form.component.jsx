@@ -1,9 +1,10 @@
 import React from 'react';
-
+import './form.style.css'
 function Form(props){
     return(
         <form>
-                <label>Kino: </label>
+             <div class="select">
+             <label>KINO: </label>
                 <select value={props.value} onChange={props.cityHandler}>
                     <option value="" ></option>
                     <option value="gdansk" >Gdańsk</option>
@@ -11,6 +12,7 @@ function Form(props){
                     <option value="krakow">Kraków</option>
                     <option value="wroclaw">Wrocław</option>
                 </select>
+                </div>
             </form>
 
     )

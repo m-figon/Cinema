@@ -2,10 +2,20 @@
     position: absolute;
     left: 70%;
     width: 30%;
-    height: 100%;
-    background-color: white;
-    z-index: 1337;
+    height: 25%;
+    background: url("https://images5.alphacoders.com/774/thumb-1920-774369.jpg");    z-index: 1337;
+    border: solid white;
 }
-.loged h1{
-    text-align: right;
+.pop-up label,h1{
+     text-align: center;
+     font-size: 20px;
+     line-height: 40px;
+     margin-left: 20px;
+     font-family: "PT Sans";
+     color: #AFAFAF;
+     margin-top: -20px;
+}
+.loged{
+    padding-bottom: -100px;
+    margin-left: 1150px;
 }

@@ -1,13 +1,15 @@
-.filters{
+.select{
     margin-left:200px;
 }
-.filter label, select, button{
+.select label, select, button{
+    margin-left: 20px;
+    margin-top: 20px;
     font-family: "PT Sans";
     color: #AFAFAF;
-    float: left
-    
+    float: left;
+    font-size: 20px;
 }
-.filter select, button {
+.select select, button {
         width: 10%;
         cursor: pointer;
         background: url('https://images5.alphacoders.com/774/thumb-1920-774369.jpg');

@@ -3,6 +3,7 @@ import {Component} from 'react';
 import './informationBar.style.css';
 import Form from './form/form.component';
 import cinemaInfo from "./cinemaInformation.json";
+import OneInfo from './oneInfo/oneInfo.component.jsx';
 class InformationBar extends Component{
 constructor(){
     super();
@@ -14,40 +15,42 @@ constructor(){
 }
 cityUpdate(event){
     var num=0;
-    if(event.target.value==="gdansk"){
+    const {value} = event.target;
+    if(value==="gdansk"){
         num=0;
-    }else if(event.target.value==="warszawa"){
+    }else if(value==="warszawa"){
         num=1;
-    }else if(event.target.value==="krakow"){
+    }else if(value==="krakow"){
         num=2;
-    }else if(event.target.value==="wroclaw"){
+    }else if(value==="wroclaw"){
         num=3;
     }
     this.setState({
-        city: event.target.value,
+        city: value,
         id: num
     })
+    event.preventDefault();
 }
 render(){
+    const {id}=this.state;
     if(this.state.city===''){
         return(
-            <div class="information-bar">
+            <>
                 <Form cityHandler={this.cityUpdate}></Form>
-            </div>
+            </>
         )
     }else{
         return(
-            <div class="information-bar">
-            <Form cityHandler={this.cityUpdate}></Form>
-            <hr></hr><h1>Adres</h1>
-            <h1>{cinemaInfo[this.state.id].adres}</h1>
-            <hr></hr><h1>O kinie</h1>
-            <h1>{cinemaInfo[this.state.id].info}</h1>
-            <hr></hr><h1>Kontakt</h1>
-            <h1>{cinemaInfo[this.state.id].contact}</h1>
-            <hr></hr><h1><a href={cinemaInfo[this.state.id].prices} download>Cennik</a></h1>
-            
-        </div> 
+                <>
+                <Form cityHandler={this.cityUpdate}></Form>
+                <br></br><br></br><br></br><br></br><br></br>
+                <div class="form">
+                <OneInfo id={id} name="ADRES"/>
+                <OneInfo id={id} name="O KINIE"/>
+                <OneInfo id={id} name="KONTAKT"/>
+                <h1><a href={cinemaInfo[id].prices} download>Cennik</a></h1>
+                </div> 
+                </>
         )
         
     }
@@ -55,4 +58,3 @@ render(){
 }
 
 export default InformationBar;
-//mozna zamienic na rozwijana liste jeszcze

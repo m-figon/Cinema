@@ -27,41 +27,42 @@ class Popup extends Component{
         this.setState({
             closed: true
         })
-        //tu moznaby zmienic this.props.id mozna sprobowac zrobic tak zeby clicked bylo czescia tej klasy
-        //wtedy nie bedzie problemu
     }
     loginOperation(){
-        if(this.state.email!=="" && this.state.password!==""){
+        const {email,password} = this.state;
+        if(email!=="" && password!==""){
             this.setState({
                 loged: true
             })
-        }else if(this.state.email!=="" && this.state.password===""){
+        }else if(email!=="" && password===""){
             alert("Prosze podac hasło");
-        }else if(this.state.email==="" && this.state.password!==""){
+        }else if(email==="" && password!==""){
             alert("Prosze podac adres e-mail");
-        }else if(this.state.email==="" && this.state.password===""){
+        }else if(email==="" && password===""){
             alert("Prosze podac adres e-mail oraz hasło");
         }
         
     }
 
     render(){
-        
-        if(this.props.id===true && this.state.loged===false){
+        const {email,password,loged} = this.state;
+        const {id} = this.props;
+        if(id===true && loged===false){
             return ( 
                 <div class="pop-up">
-                    <button onClick={this.closeWindow}>Close</button>
+                    <br></br>
                     <form>
-                    <label>Adres e-mail: </label><input type='text' value={this.state.email} onChange={this.enterUserName}/>
-                    <label>Hasło: </label><input type="password" value={this.state.password} onChange={this.enterPassword}/>
+                    <label>Adres e-mail: </label><input type='text' value={email} onChange={this.enterUserName}/>
+                   <br></br><br></br> <label>Hasło: </label><input type="password" value={password} onChange={this.enterPassword}/>
                     </form>
+                    <br></br>
                    <h1 onClick={this.loginOperation}>Zaloguj</h1> 
                 </div>
             )
-        }else if(this.props.id===true && this.state.loged===true){
+        }else if(id===true && loged===true){
                return(
                 <div class="loged">
-                <h1>Jesteś zalogowany jako: {this.state.email}</h1>
+                <h1>Zalogowany: {email}</h1>
                 </div>
                )            
         }else{

@@ -1,15 +1,15 @@
 
 .upper-bar{
+    background: url("https://images5.alphacoders.com/774/thumb-1920-774369.jpg");
     width:80%;
     height:15%;
-    background: rgb(0,0,0);
-    background: linear-gradient(71deg, rgba(0,0,0,1) 0%, rgba(52,48,48,1) 38%, rgba(88,91,91,1) 100%); 
     display: inline-block; 
 }
 .App-logo{
     width:100px;
     height:100px;
     float:left;
+    margin-top: -30px;
 }
 .text-bar{
     margin-right: 40px;
@@ -19,22 +19,14 @@
 }
 .upper-bar h1{
     margin-left: 20px;
+    font-size: 24px;
     display: inline;
     position: relative;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 20px;
-    letter-spacing: 0.8px;
-    word-spacing: 10px;
-    color: #DBDBDB;
-    font-weight: 700;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: uppercase;
+    font-family: "PT Sans";
+    color: #AFAFAF;
 }
 .upper-bar h1:hover{
 color: #FFFFFF;
-background: #232323;
 cursor: pointer;
-text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #3248a8, 0 0 30px #3248a8, 0 0 40px #3248a8, 0 0 55px #3248a8, 0 0 75px #3248a8;
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5) ;
 }

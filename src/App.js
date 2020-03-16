@@ -56,7 +56,7 @@ class App extends Component {
       console.log("none filter!")
     }
   render(){
-    if(this.state.display==="repertoire"){
+      if(this.state.display==="repertoire"){
       return (
         <div className="App">
             <UpperBar repertoireHandler={this.repertoireShow} informationHandler={this.informationShow}/>
@@ -72,11 +72,12 @@ class App extends Component {
             <UpperBar repertoireHandler={this.repertoireShow} informationHandler={this.informationShow} />
             <InformationBar></InformationBar>
         </div>
-        
       ); 
     }
     }
   }
-//zrob rozwijana liste w info, zrob logowanie, potem dodaj pasek wyszukiwania kino i data
-//wazna lekcja na dzis: w funkcji map mozna stawiac warunek przed return
+//ogarnij te klasy aboutcinema, adress i contact jako klasa wspolna z tutoriala
+//mozesz dodac filtrowanie po kinie i seansach ale to juz bedzie troche roboty pewnie i zmieniania
+//dopracuj wyglad
+  //wazna lekcja na dzis: w funkcji map mozna stawiac warunek przed return
 export default App;
