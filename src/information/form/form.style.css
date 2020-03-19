@@ -1,15 +1,17 @@
 .select{
-    margin-left:200px;
-}
-.select label, select, button{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-family: "PT Sans";
+    margin-left: 10%;}
+.select label,
+.select select, 
+.select button{
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+    font-family: 'PT Sans', sans-serif;
     color: #AFAFAF;
     float: left;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-.select select, button {
+.select select, 
+.select button {
         width: 10%;
         cursor: pointer;
         background: url('https://images5.alphacoders.com/774/thumb-1920-774369.jpg');

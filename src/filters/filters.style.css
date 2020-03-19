@@ -1,13 +1,16 @@
 .filters{
-    margin-left:200px;
+    margin-left: 10%;
 }
-.filter label, select, button{
-    font-family: "PT Sans";
+.filter label,
+.filter select,
+.filter button{
+    font-family: 'PT Sans', sans-serif;
     color: #AFAFAF;
     float: left
     
 }
-.filter select, button {
+.filter select,
+.filter button {
         width: 10%;
         cursor: pointer;
         background: url('https://images5.alphacoders.com/774/thumb-1920-774369.jpg');

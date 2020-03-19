@@ -50,13 +50,11 @@ class Popup extends Component{
         if(id===true && loged===false){
             return ( 
                 <div class="pop-up">
-                    <br></br>
                     <form>
-                    <label>Adres e-mail: </label><input type='text' value={email} onChange={this.enterUserName}/>
-                   <br></br><br></br> <label>Hasło: </label><input type="password" value={password} onChange={this.enterPassword}/>
+                    <h1>Adres e-mail: </h1><input type='text' value={email} onChange={this.enterUserName}/>
+                    <h1>Hasło: </h1><input type="password" value={password} onChange={this.enterPassword}/>
                     </form>
-                    <br></br>
-                   <h1 onClick={this.loginOperation}>Zaloguj</h1> 
+                   <h1 id="log" onClick={this.loginOperation}>Zaloguj</h1> 
                 </div>
             )
         }else if(id===true && loged===true){
@@ -68,7 +66,7 @@ class Popup extends Component{
         }else{
             return(
                 <div class="loged">
-                <h1>Jesteś wylogowany</h1>
+                <h1>Wylogowany</h1>
                 </div>
             )
         }

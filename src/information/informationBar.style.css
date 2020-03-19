@@ -1,26 +1,25 @@
 .form{
     width:80%;
-    float: center;
     background: url("https://images5.alphacoders.com/774/thumb-1920-774369.jpg");
-    margin-left: 163px;
-    margin-right: 280px;
+    margin-left: 8.5%;
+    margin-right: 10%;
     padding: 50px 30px;
 }
 
-.form label,h1,p{
-    
+.form label,
+.form h1,
+.form p{
     text-align: left;
-    position: relative;
-    font-size: 24px;
-    font-family: "PT Sans";
+    font-size: 1.5rem;
+    font-family: 'PT Sans', sans-serif;
     color: #AFAFAF;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 3.13rem;
+    margin-right: 3.13rem;
 }
 .form p{
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 50px;
+    font-size: 1.13rem;
+    line-height: 1.88rem;
+    margin-bottom: 3.13rem;
 }
 .form a{
     color: #AFAFAF;

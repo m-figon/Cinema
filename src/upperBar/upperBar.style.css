@@ -1,32 +1,42 @@
 
 .upper-bar{
+    margin-left: 10%;
+    margin-right: 10%;
     background: url("https://images5.alphacoders.com/774/thumb-1920-774369.jpg");
     width:80%;
     height:15%;
     display: inline-block; 
+    
 }
 .App-logo{
-    width:100px;
-    height:100px;
+    width:7%;
+    height:7%;
     float:left;
-    margin-top: -30px;
+    margin-top: -2.5rem;
+    
 }
 .text-bar{
-    margin-right: 40px;
-    margin-top: 25px;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    margin-top: -1.88rem;
     display: flex;
     justify-content: space-between;
+    
 }
-.upper-bar h1{
-    margin-left: 20px;
-    font-size: 24px;
-    display: inline;
-    position: relative;
-    font-family: "PT Sans";
+.text-bar h1{
+    margin-left: 1.25rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    font-family: 'PT Sans', sans-serif;
     color: #AFAFAF;
 }
-.upper-bar h1:hover{
+.text-bar h1:hover{
 color: #FFFFFF;
 cursor: pointer;
 text-shadow: 2px 2px 3px rgba(255,255,255,0.5) ;
+}
+@media (max-width: 1450px){
+    .text-bar h1{
+        font-size: 1.0rem;
+    }
 }

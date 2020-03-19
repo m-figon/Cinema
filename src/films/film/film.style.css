@@ -1,36 +1,64 @@
 .film{
    background: url('https://images5.alphacoders.com/774/thumb-1920-774369.jpg');
     width:80%;
-    display: inline-block; 
+    display: flex; 
+    margin-left: 10%;
+    margin-right: 10%;
+     padding-bottom: 3%;
+    justify-content: space-between;
 }
-.film h2,h1{
+.film h2,
+.film h1{
     text-align: left;
-    position: relative;
-    font-family: "PT Sans";
+    font-family: 'PT Sans', sans-serif;
     color: #AFAFAF;
     font-weight: 700;
     
 }
 .film h2{
-    font-size: 30px;
+    font-size: 1.88rem;
     text-transform: uppercase;
-    margin-left: 100px;
 }
 .film h1{
-    font-size: 24px;
-    line-height: 50px;
-    margin: 0px;
+    font-size: 1.5rem;
+    line-height: 0.6rem;
 }
 .film img{
-    width:20%;
-    height: 20%;
+    width:20rem;
+}
+.video{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 7%;
+}
+.introduction{
+    display: block;
     float: left;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    margin-left: -10%;
+}
+.filmInfo{
+    margin-top: 10%;
+    margin-left: -14%;
+    display: inline-block;
 }
 .film iframe{
-    width: 600px;
-    height:400px;
-    margin-top: -150px;
+    width: 35rem;
+    height: 22rem;
+}
+@media (max-width: 1450px){
+    .film iframe{
+        width: 20rem;
+        height: 15rem;
+    }
+    .film img{
+        width:14rem;
+    }
+    .film h1{
+        font-size: 1.0rem;
+        line-height: 0.2rem;
+    }
+    .film h2{
+        font-size: 1.4rem;
+    }
 }

@@ -31,10 +31,11 @@ class UpperBar extends Component{
         const {repertoireHandler, informationHandler} = this.props;
             return(
                 <div class="upper-bar">
-                    <Popup name={loginName} id={clicked}/>
+                    <Popup name={loginName} id={clicked}/> 
+                    
                     <img src={logo} className="App-logo" alt="logo" />
                     <div class="text-bar">
-                        <h1 onClick={repertoireHandler}> RCNEMA</h1>
+                        <h1 onClick={repertoireHandler}> RICNEMA</h1>
                         <h1 class="distance" onClick={repertoireHandler}> REPERTUAR</h1>
                         <h1 onClick={informationHandler}> INFORMACJE</h1>
                         <h1 onClick={this.login}>ZALOGUJ/WYLOGUJ</h1>
