@@ -1,12 +1,14 @@
 .pop-up{
     position: absolute;
     left: 70%;
+    top: -0.5%;
     width: 30%;
     height: 15rem;
     background: url("https://images5.alphacoders.com/774/thumb-1920-774369.jpg");  
     z-index: 1;
     border: solid white;
 }
+
 .pop-up form{
     display: block;
 }

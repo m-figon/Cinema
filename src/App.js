@@ -7,77 +7,41 @@ import Filters from './filters/filters.component';
 import Films from './films/films.component';
 import InformationBar from './information/informationBar.component';
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state={
+    this.state = {
       display: "repertoire",
       type: ""
     };
-    this.repertoireShow = this.repertoireShow.bind(this);
-    this.informationShow = this.informationShow.bind(this);
-    this.dramaFilter = this.dramaFilter.bind(this);
-    this.comedyFilter = this.comedyFilter.bind(this);
-    this.animeFilter = this.animeFilter.bind(this);
-    this.noneFilter = this.noneFilter.bind(this);
+    this.setStateChange = this.setStateChange.bind(this);
+  }
+  setStateChange(type1, value1, type2, value2) {
+    this.setState({
+      [type1]: value1,
+      [type2]: value2
+    });
+  }
 
-  }
-  repertoireShow(){
-    this.setState({
-      display:"repertoire"
-    });
-  }
-  informationShow(){
-    this.setState({
-      display:"information"
-    });
-  }
-  dramaFilter(){
-      this.setState({
-        type:"Dramat"
-      });
-      console.log("drama filter!")
-    }
-    animeFilter(){
-      this.setState({
-        type:"Animowany"
-      });
-      console.log("anime filter!")
-    }
-    comedyFilter(){
-      this.setState({
-        type:"Komedia"
-      });
-      console.log("comedy filter!")
-    }
-    noneFilter(){
-      this.setState({
-        type:""
-      });
-      console.log("none filter!")
-    }
-  render(){
-      if(this.state.display==="repertoire"){
+  render() {
+    if (this.state.display === "repertoire") {
       return (
         <div className="App">
-            <UpperBar repertoireHandler={this.repertoireShow} informationHandler={this.informationShow}/>
-            <ImageBar/>
-            <Filters name={this.state.type} noneHandler={this.noneFilter} dramaHandler={this.dramaFilter} comedyHandler={this.comedyFilter} animeHandler={this.animeFilter}/><br/><br/>
-            <Films name={this.state.type}/>
+          <UpperBar setStateHandler={this.setStateChange} />
+          <ImageBar />
+          <Filters name={this.state.type} setStateHandler={this.setStateChange} /><br /><br />
+          <Films name={this.state.type} />
         </div>
       );
     }
-    else if(this.state.display==="information"){
-      return(
+    else if (this.state.display === "information") {
+      return (
         <div className="App">
-            <UpperBar repertoireHandler={this.repertoireShow} informationHandler={this.informationShow} />
-            <InformationBar></InformationBar>
+          <UpperBar setStateHandler={this.setStateChange} />
+          <InformationBar />
         </div>
-      ); 
-    }
+      );
     }
   }
-//ogarnij te klasy aboutcinema, adress i contact jako klasa wspolna z tutoriala
-//mozesz dodac filtrowanie po kinie i seansach ale to juz bedzie troche roboty pewnie i zmieniania
-//dopracuj wyglad
-  //wazna lekcja na dzis: w funkcji map mozna stawiac warunek przed return
+}
+
 export default App;
