@@ -3,6 +3,7 @@ import { Component } from 'react';
 import logo from '../logo.svg';
 import './upperBar.style.css';
 import Popup from "../popup/popup.component";
+import { Link } from 'react-router-dom';
 class UpperBar extends Component {
     constructor() {
         super();
@@ -47,9 +48,9 @@ class UpperBar extends Component {
                 <Popup status={this.state.loginState} setStateHandler={this.setStateChange} name={loginName} id={clicked} />
                 <img src={logo} className="App-logo" alt="logo" />
                 <div class="text-bar">
-                    <h1 onClick={() => this.props.setStateHandler("display", "repertoire")}> RICNEMA</h1>
-                    <h1 class="distance" onClick={() => this.props.setStateHandler("display", "repertoire")}> REPERTUAR</h1>
-                    <h1 onClick={() => this.props.setStateHandler("display", "information")}> INFORMACJE</h1>
+                <Link to={'/'}><h1> RICNEMA</h1></Link>
+                <Link to={'/repertoire'}><h1 class="distance" > REPERTUAR</h1></Link>
+                <Link to={'/information'}><h1 > INFORMACJE</h1></Link>
                     <h1 onClick={() => this.login()}>{this.state.operation}</h1>
                 </div>
             </div>

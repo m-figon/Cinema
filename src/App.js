@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Route } from 'react-router-dom';
 import './App.css';
 import UpperBar from './upperBar/upperBar.component';
 import ImageBar from './imageBar/imageBar.component';
@@ -10,7 +10,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      display: "repertoire",
       type: ""
     };
     this.setStateChange = this.setStateChange.bind(this);
@@ -21,9 +20,17 @@ class App extends Component {
       [type2]: value2
     });
   }
-
+  
   render() {
-    if (this.state.display === "repertoire") {
+    const HomeComponent = () =>{
+      return (
+        <div className="App">
+          <UpperBar setStateHandler={this.setStateChange} />
+          <ImageBar />
+        </div>
+      );
+    }
+    const RepertoireComponent = () =>{
       return (
         <div className="App">
           <UpperBar setStateHandler={this.setStateChange} />
@@ -33,7 +40,7 @@ class App extends Component {
         </div>
       );
     }
-    else if (this.state.display === "information") {
+    const InformationComponent = () =>{
       return (
         <div className="App">
           <UpperBar setStateHandler={this.setStateChange} />
@@ -41,6 +48,14 @@ class App extends Component {
         </div>
       );
     }
+
+      return(
+      <>
+        <Route exact path='/' component={HomeComponent}/>
+        <Route exact path='/repertoire' component={RepertoireComponent}/>
+        <Route exact path='/information' component={InformationComponent}/>
+      </>
+      );
   }
 }
 
