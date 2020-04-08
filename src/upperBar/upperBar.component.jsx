@@ -21,6 +21,10 @@ class UpperBar extends Component {
             [type]: value
         })
     }
+    componentDidMount(){
+        //this.props.createPost("elkoooo!");
+        console.log(this.props.items);
+      }
     login() {
         if (!this.state.clicked) {
             this.setState({
