@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import cinemaInfo from '../cinemaInformation.json';
-
 class OneInfo extends Component {
     constructor() {
         super();
@@ -14,21 +12,21 @@ class OneInfo extends Component {
         })
     }
     render() {
-        var info = null;
+        var inform = null;
         const { show } = this.state;
         const { id, name } = this.props;
         if (name === "O KINIE") {
-            info = cinemaInfo[id].info;
+            inform = this.props.information[id].info;
         } if (name === "ADRES") {
-            info = cinemaInfo[id].adres;
+            inform = this.props.information[id].adres;
         } if (name === "KONTAKT") {
-            info = cinemaInfo[id].contact;
+            inform = this.props.information[id].contact;
         }
         if (show) {
             return (
                 <React.Fragment>
                     <h1 onMouseEnter={() => this.showText()}>{name}</h1>
-                    <p>{info}</p>
+                    <p>{inform}</p>
                 </React.Fragment>
             );
         } else {

@@ -2,7 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 import './informationBar.style.css';
 import Form from './form/form.component';
-import cinemaInfo from "./cinemaInformation.json";
 import OneInfo from './oneInfo/oneInfo.component.jsx';
 class InformationBar extends Component {
     constructor() {
@@ -12,6 +11,7 @@ class InformationBar extends Component {
             id: 20
         };
     }
+    
     cityUpdate(event) {
         var num = 0;
         const { value } = event.target;
@@ -31,6 +31,8 @@ class InformationBar extends Component {
         event.preventDefault();
     }
     render() {
+        console.log("information:");
+        console.log(this.props.info);
         const { id } = this.state;
         if (this.state.city === '') {
             return (
@@ -44,10 +46,10 @@ class InformationBar extends Component {
                     <Form cityHandler={(e) => this.cityUpdate(e)}></Form>
                     <br></br><br></br><br></br><br></br><br></br>
                     <div class="form">
-                        <OneInfo id={id} name="ADRES" />
-                        <OneInfo id={id} name="O KINIE" />
-                        <OneInfo id={id} name="KONTAKT" />
-                        <h1><a href={cinemaInfo[id].prices} download>Cennik</a></h1>
+                        <OneInfo information={this.props.info} id={id} name="ADRES" />
+                        <OneInfo information={this.props.info} id={id} name="O KINIE" />
+                        <OneInfo information={this.props.info} id={id} name="KONTAKT" />
+                        <h1><a href={this.props.info[id].prices} download>Cennik</a></h1>
                     </div>
                 </>
             )

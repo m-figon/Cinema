@@ -1,12 +1,11 @@
 import React from 'react';
-import filmData from './filmsDataBase.json';
 import Film from './film/film.component.jsx';
 function Films(props) {
-    const MySubComponent = (props) => {
+    const MySubComponent = (props2) => {
         return (
             <>
                 <br></br>
-                <Film id={props.item.id}></Film>
+                <Film films={props.films} id={props2.item.id}></Film>
                 <br></br>
             </>
         );
@@ -14,7 +13,7 @@ function Films(props) {
     if (!props.name) {
         return (
             <>
-                {filmData.map((element) => {
+                {props.films.map((element) => {
                     return (
                         <MySubComponent item={element} />
                     )
@@ -24,7 +23,7 @@ function Films(props) {
     } else {
         return (
             <>
-                {filmData.map((element) => {
+                {props.films.map((element) => {
                     if (element.type === props.name) {
                         return (
                             <MySubComponent item={element} />
